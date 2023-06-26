@@ -8,13 +8,13 @@ public class Main {
         int i = scanner.nextInt();
         switch (i){
             case 1:
-                System.out.println("TBD");
+                firstPart();
                 break;
             case 2:
                 secondPart();
                 break;
             case 3:
-                System.out.println("TBD 3");
+                thirdPart();
                 break;
             default:
                 System.out.println("I'm sorry, I've only done the required part so far :(");
@@ -34,7 +34,40 @@ public class Main {
                 "Ну и последней вывелось 2, так как мы после своего перезаписанного метода вызвали еще супер метод, " +
                 "соответвенно вывев свой метод он пошел к папке и вывел его метод, так как 2й класс радной папка 3го)))");
     }
+    static void firstPart(){
+        Eagle e = new Eagle();
+        Penguin pn = new Penguin();
+        Pelican pl = new Pelican();
+        System.out.println("Eagle skills");
+        e.eat();
+        e.fly();
+        e.sleep();
+        e.voice();
+        System.out.println();
+        System.out.println("Penguin skills");
+        pn.eat();
+        pn.swim();
+        pn.sleep();
+        pn.voice();
+        System.out.println();
+        System.out.println("Pelican skills");
+        pl.eat();
+        pl.fly();
+        pl.swim();
+        pl.sleep();
+        pl.voice();
+    }
     static void thirdPart(){
+        Cars bmv = new Cars("Black", 4, 4);
+        Cars opel = new Cars("Gray", 5, 4);
+        Cars reno = new Cars("White", 3, 4);
+        opel.setWheels(3);
+        opel.setDoors(3);
+//        bmv.setDoors(8); закоментил, так как будет эксепшн выбивать
+        System.out.println(opel);
+        System.out.println(bmv);
+        System.out.println(reno);
+        System.out.println(opel.getWheels() + " " + opel.getDoors());
 
     }
 }
